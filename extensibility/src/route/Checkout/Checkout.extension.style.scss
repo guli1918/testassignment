@@ -1,0 +1,101 @@
+.Checkout::before {
+	background-color: white;
+}
+.Checkout {
+	margin-top: 150px;
+}
+.Checkout-Step {
+	position: relative;
+	bottom: 25px;
+}
+.Checkout-extension {
+	display: flex;
+	position: relative;
+	bottom: 50px;
+}
+
+.Checkout-extension-progress {
+	width: 52vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.Checkout-progress-extension-bar {
+	width: calc(49vw / 3);
+	height: 5px;
+	background-color: $default-secondary-light-color;
+	border-radius: 10px;
+}
+
+.Checkout-progress-extension-bar-active {
+	width: calc(49vw / 3);
+	height: 5px;
+	background-color: $default-primary-base-color;
+	border-radius: 10px;
+	animation-name: example;
+	animation-duration: 2s;
+
+	@keyframes example {
+		from {
+			width: 0px;
+			background-color: $default-secondary-light-color;
+		}
+		to {
+			width: calc(49vw / 3);
+			background-color: $default-primary-base-color;
+		}
+	}
+}
+
+.Checkout-progress-circle {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: $default-secondary-light-color;
+	margin: 0 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	h3 {
+		position: relative;
+		top: 19px;
+		color: $default-secondary-dark-color;
+	}
+	p {
+		position: relative;
+		top: 10px;
+		font-weight: bold;
+	}
+}
+
+.Checkout-progress-circle-active {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: $default-primary-base-color;
+	margin: 0 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	h3 {
+		position: relative;
+		top: 19px;
+		color: white;
+	}
+	p {
+		position: relative;
+		top: 10px;
+		font-weight: bold;
+	}
+}
+
+.Checkout-progress-default {
+	min-width: calc(52vw / 3);
+	height: 5px;
+	background-color: $default-primary-base-color;
+}
