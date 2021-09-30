@@ -17,16 +17,18 @@ class Checkout extends sourceCheckout {
 								<div
 									className={
 										this.stepMap[checkoutStep].title.value.split(' ')[0] ===
-										step.title.value.split(' ')[0]
+											step.title.value.split(' ')[0] ||
+										Object.keys(this.stepMap).indexOf(checkoutStep) > key
 											? 'Checkout-progress-extension-bar-active'
 											: 'Checkout-progress-extension-bar'
 									}
 								></div>
-								{console.log(this.stepMap[checkoutStep])}
+								{console.log(Object.keys(this.stepMap).indexOf(checkoutStep))}
 								<div
 									className={
 										this.stepMap[checkoutStep].title.value.split(' ')[0] ===
-										step.title.value.split(' ')[0]
+											step.title.value.split(' ')[0] ||
+										Object.keys(this.stepMap).indexOf(checkoutStep) > key
 											? 'Checkout-progress-circle-active'
 											: 'Checkout-progress-circle'
 									}
